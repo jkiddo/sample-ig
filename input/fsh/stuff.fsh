@@ -29,7 +29,7 @@ Title: "ISO 3166-3 Codes for the representation of names of countries and their 
 * ^content = #supplement
 * ^experimental = false
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^supplements = "urn:iso:std:iso:3166:-3"
+* ^supplements = "urn:iso:std:iso:3166"
 * #AFG
 * #AFG ^designation[0].language = #de-CH
 * #AFG ^designation[=].value = "Afghanistan"
