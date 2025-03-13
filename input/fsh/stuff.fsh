@@ -74,3 +74,80 @@ Usage: #definition
 * parameter[=].valueBoolean = true
 //* parameter[+].name = "displayLanguage"
 //* parameter[=].valueCode = urn:ietf:bcp:47#da
+
+
+Alias: $sct = http://snomed.info/sct
+Alias: $formatcode = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode
+
+Instance: CH-MDH-EXAMPLE
+InstanceOf: DocumentReference
+Usage: #example
+* meta.profile = "http://fhir.ch/ig/ch-epr-fhir/StructureDefinition/ch-mhd-documentreference-comprehensive"
+* masterIdentifier.system = "http://someone/document-uniqueId"
+* masterIdentifier.value = "urn:oidcc74e20a-0dc7-4379-9fd1-07564ff3af81"
+* identifier[0].use = #usual
+* identifier[=].system = "http://someone/home-community-id"
+* identifier[=].value = "urn:oid9789b04e-e78b-4cde-9232-2ee796d99a49"
+* identifier[+].use = #usual
+* identifier[=].system = "http://someone/entry-id"
+* identifier[=].value = "urn:oid9789b04e-e78b-4cde-9232-2ee796d99a49"
+* identifier[+].use = #usual
+* identifier[=].system = "http://someone/xds-logical-id"
+* identifier[=].value = "urn:oid9789b04e-e78b-4cde-9232-2ee796d99a49"
+* status = #current
+* type = $sct#722446000
+* category = $sct#184216000
+* subject = Reference(PatientExample)
+* date = "2025-03-13T10:21:30.092+01:00"
+* author = Reference(PatientExample)
+* description = "Test Deletion Desc"
+* securityLabel = $sct#17621005
+* content.attachment.contentType = #application/pdf
+* content.attachment.language = #it-CH
+* content.attachment.url = "urn:uuid:937500cf-20fe-402b-8ec4-8e6683773193"
+* content.attachment.hash = "8843d7f92416211de9ebb963ff4ce28125932878"
+* content.attachment.title = "Test new version author-self"
+* content.attachment.creation = "2025-03-13T10:21:30+01:00"
+* content.format = $formatcode#urn:ihe:iti:xds:2017:mimeTypeSufficient
+* context.facilityType = $sct#22232009
+* context.practiceSetting = $sct#394802001
+* context.sourcePatientInfo = Reference(PatientExample)
+* extension[0].url = "http://fhir.ch/ig/ch-epr-fhir/StructureDefinition/ch-ext-author-authorrole"
+* extension[=].valueCoding = urn:oid:2.16.756.5.30.1.127.3.10.6#HCP "Healthcare professional"
+
+
+Instance: IHE-MDH-EXAMPLE
+InstanceOf: DocumentReference
+Usage: #example
+* meta.profile = "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+* masterIdentifier.system = "http://someone/document-uniqueId"
+* masterIdentifier.value = "urn:oidcc74e20a-0dc7-4379-9fd1-07564ff3af81"
+* identifier[0].use = #usual
+* identifier[=].system = "http://someone/home-community-id"
+* identifier[=].value = "urn:oid9789b04e-e78b-4cde-9232-2ee796d99a49"
+* identifier[+].use = #usual
+* identifier[=].system = "http://someone/entry-id"
+* identifier[=].value = "urn:oid9789b04e-e78b-4cde-9232-2ee796d99a49"
+* identifier[+].use = #usual
+* identifier[=].system = "http://someone/xds-logical-id"
+* identifier[=].value = "urn:oid9789b04e-e78b-4cde-9232-2ee796d99a49"
+* status = #current
+* type = $sct#722446000
+* category = $sct#184216000
+* subject = Reference(PatientExample)
+* date = "2025-03-13T10:21:30.092+01:00"
+* author = Reference(PatientExample)
+* description = "Test Deletion Desc"
+* securityLabel = $sct#17621005
+* content.attachment.contentType = #application/pdf
+* content.attachment.language = #it-CH
+* content.attachment.url = "urn:uuid:937500cf-20fe-402b-8ec4-8e6683773193"
+* content.attachment.hash = "8843d7f92416211de9ebb963ff4ce28125932878"
+* content.attachment.title = "Test new version author-self"
+* content.attachment.creation = "2025-03-13T10:21:30+01:00"
+* content.format = $formatcode#urn:ihe:iti:xds:2017:mimeTypeSufficient
+* context.facilityType = $sct#22232009
+* context.practiceSetting = $sct#394802001
+* context.sourcePatientInfo = Reference(PatientExample)
+* extension[0].url = "http://fhir.ch/ig/ch-epr-fhir/StructureDefinition/ch-ext-author-authorrole"
+* extension[=].valueCoding = urn:oid:2.16.756.5.30.1.127.3.10.6#HCP "Healthcare professional"
